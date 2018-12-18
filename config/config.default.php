@@ -18,7 +18,7 @@ return [
     'maintenance'             => (bool)env('MAINTENANCE', false),
 
     // Application name (not the event name!)
-    'app_name'                => env('APP_NAME', 'Engelsystem'),
+    'app_name'                => env('APP_NAME', 'OIO Engelsystem'),
 
     // Set to development to enable debugging messages
     'environment'             => env('ENVIRONMENT', 'production'),
@@ -26,10 +26,10 @@ return [
     // Footer links
     'footer_items'            => [
         // URL to the angel faq and job description
-        'FAQ'     => env('FAQ_URL', 'https://events.ccc.de/congress/2013/wiki/Static:Volunteers'),
+       // 'FAQ'     => env('FAQ_URL', 'https://events.ccc.de/congress/2013/wiki/Static:Volunteers'),
 
         // Contact email address, linked on every page
-        'Contact' => env('CONTACT_EMAIL', 'mailto:ticket@c3heaven.de'),
+        'Contact' => env('CONTACT_EMAIL', 'mailto:35c3-orga@freifunk.space'),
     ],
 
     // Email config
@@ -38,8 +38,8 @@ return [
         'driver' => env('MAIL_DRIVER', 'mail'),
         'from'   => [
             // From address of all emails
-            'address' => env('MAIL_FROM_ADDRESS', 'noreply@engelsystem.de'),
-            'name'    => env('MAIL_FROM_NAME', env('APP_NAME', 'Engelsystem'))
+            'address' => env('MAIL_FROM_ADDRESS', 'noreply@freifunk.space'),
+            'name'    => env('MAIL_FROM_NAME', env('APP_NAME', 'OIO Engelsystem'))
         ],
 
         'host'       => env('MAIL_HOST', 'localhost'),
@@ -52,7 +52,7 @@ return [
     ],
 
     // Default theme, 1=style1.css
-    'theme'                   => env('THEME', 1),
+    'theme'                   => env('THEME', 0),
 
     // Available themes
     'available_themes'        => [
@@ -93,7 +93,7 @@ return [
     'min_password_length'     => 8,
 
     // Enables the T-Shirt configuration on signup and profile
-    'enable_tshirt_size'      => true,
+    'enable_tshirt_size'      => false,
 
     // Number of shifts to freeload until angel is locked for shift signup.
     'max_freeloadable_shifts' => 2,
@@ -103,7 +103,7 @@ return [
 
     // Multiply 'night shifts' and freeloaded shifts (start or end between 2 and 6 exclusive) by 2
     'night_shifts'            => [
-        'enabled'    => true, // Disable to weigh every shift the same
+        'enabled'    => false, // Disable to weigh every shift the same
         'start'      => 2,
         'end'        => 6,
         'multiplier' => 2,
@@ -125,19 +125,7 @@ return [
     'default_locale'          => env('DEFAULT_LOCALE', 'en_US.UTF-8'),
 
     // Available T-Shirt sizes, set value to null if not available
-    'tshirt_sizes'            => [
-        'S'    => 'Small Straight-Cut',
-        'S-G'  => 'Small Fitted-Cut',
-        'M'    => 'Medium Straight-Cut',
-        'M-G'  => 'Medium Fitted-Cut',
-        'L'    => 'Large Straight-Cut',
-        'L-G'  => 'Large Fitted-Cut',
-        'XL'   => 'XLarge Straight-Cut',
-        'XL-G' => 'XLarge Fitted-Cut',
-        '2XL'  => '2XLarge Straight-Cut',
-        '3XL'  => '3XLarge Straight-Cut',
-        '4XL'  => '4XLarge Straight-Cut',
-    ],
+    'tshirt_sizes'            => [],
 
     // Session config
     'session'                 => [
